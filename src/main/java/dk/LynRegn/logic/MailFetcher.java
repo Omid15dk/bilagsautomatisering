@@ -59,8 +59,7 @@ public class MailFetcher {
         Session session = Session.getInstance(getImapProperties());
         Store store = session.getStore("imaps");
         store.connect(email, password);
-        return Store;
-        System.out.println();
+        return store;
     }
 
     private Folder getFolderFromStore(Store store, String folderName) throws MessagingException {
